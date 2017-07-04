@@ -1,6 +1,6 @@
 cd $HOME
 ************************************************
-git clone https://github.com/telebombang2018/ehsan.git
+git clone https://github.com/telebombang2018/no.join.git
 ************************************************
 cd ehsan
 ************************************************
