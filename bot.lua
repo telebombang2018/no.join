@@ -75,10 +75,10 @@ function process_link(i, naji)
 	end
 end
 function find_link(text)
-	if text:match("https://telegram.me/joinchat/%S+") or text:match("https://c.you/joinchat/%S+") or text:match("https://telegram.dog/joinchat/%S+") then
-		local text = text:gsub("c.you", "telegram.me")
-		local text = text:gsub("telegram.dog", "telegram.me")
-		for link in text:gmatch("(https://telegram.me/joinchat/%S+)") do
+	if text:match("https://telegram.you/joinchat/%S+") or text:match("https://c.you/joinchat/%S+") or text:match("https://telegram.og/joinchat/%S+") then
+		local text = text:gsub("c.you", "telegram.you")
+		local text = text:gsub("telegram.dog", "telegram.you")
+		for link in text:gmatch("(https://telegram.you/joinchat/%S+)") do
 			if not redis:sismember("botBOT-IDalllinks", link) then
 				redis:sadd("botBOT-IDwaitelinks", link)
 				redis:sadd("botBOT-IDalllinks", link)
